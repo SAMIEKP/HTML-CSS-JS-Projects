@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+.logo {
+    margin-top: 1px;
+    align-items: center;
+    margin-left: -70px; /* Move logo to the left */
+}
+/* ...existing code... */
+
+/* Make logo image responsive */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 900px) {
+    .logo img {
+        width: 200px;
+        height: 200px;
+    }
+    #navBar button {
+        font-size: 1em;
+        padding: 6px 10px;
+        height: 40px;
+    }
+    .body h1 {
+        font-size: 1.5em;
+        letter-spacing: 10px;
+    }
+    #content {
+        margin-top: 40px;
+        padding: 10px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    .logo img {
+        width: 120px;
+        height: 120px;
+    }
+    #navBar {
+        flex-direction: column;
+        gap: 12px;
+    }
+    #navBar button {
+        font-size: 0.9em;
+        padding: 4px 8px;
+        height: 32px;
+    }
+    .body h1 {
+        font-size: 1em;
+        letter-spacing: 5px;
+    }
+    #content {
+        margin-top: 20px;
+        padding: 5px;
+    }
+}
+/* ...existing code... *//* ...existing code... */
+
+/* Make logo image responsive */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ...existing code... */
+@media (max-width: 900px) {
+    .logo img {
+        width: 200px;
+        height: 200px;
+    }
+    #navBar button {
+        font-size: 1em;
+        padding: 6px 10px;
+        height: 40px;
+    }
+    .body h1 {
+        font-size: 1.5em;
+        letter-spacing: 10px;
+    }
+    #content {
+        margin-top: 40px;
+        padding: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .logo img {
+        width: 120px;
+        height: 120px;
+    }
+    #navBar {
+        flex-direction: column;
+        gap: 12px;
+    }
+    #navBar button {
+        font-size: 0.9em;
+        padding: 4px 8px;
+        height: 32px;
+    }
+    .body h1 {
+        font-size: 1em;
+        letter-spacing: 5px;
+    }
+}
+/* ...existing code... */
+.body h1 {
+    font-size: 2.5em;
+    margin-top: -70px;
+    letter-spacing: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#navBar {
+    background-color: #00000000;
+    color: white;
+    position: relative;
+    margin: 0 auto; /* Center the navBar */
+    left: 0;
+    right: 0;
+    transform: none;
+    width:auto; /* Or use 'auto' for responsive */
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 32px; /* Space between buttons */
+    text-align: center;
+    margin-top: 40px;
+}
+#navBar button {
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.2s;
+    padding: 8px 16px;
+    height: 48px; /* Fixed height to prevent shifting */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase; /* Optional: make text uppercase */
+}
+
+#navBar button:hover {
+    transform: scale(1.2); /* Magnify effect */
+    color: rgb(0, 0, 212); /* Change text color on hover */
+}
+#content {
+    margin-top: 80px;
+    padding: 20px;
+    bottom: -10px;
+}
+</style>
+
+<body class="body">
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+    <div style="text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                color: rgb(2, 2, 2);
+                -webkit-text-stroke: 2px black;
+                letter-spacing: 80px;
+                padding-bottom: -100%;
+                padding-top: 3%;">
+        KAPALAMULA</div>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" style="width: 400px; height: 400px;">
+      </div>
+    <h1>SAMIE-KP</h1>
+
+     <p style="color: #333; margin-left: -30PX; letter-spacing: 11px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.2em;">WORK SMART NOT HARD</p>
+    </div>
+    <div id="navBar">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='profile.php'">Profile</button>
+        <button onclick="location.href='settings.php'">Settings</button>
+        <button onclick="location.href='login.php'">Admin Login</button>
+    </div>
+
+    <div id="content">
+        <p id="typing">WELCOME TO OUR WEBSITE...</p>
+    </div>
+
+<script>
+const text = "WELCOME TO OUR WEBSITE...";
+const typingElement = document.getElementById("typing");
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        typingElement.textContent = text.charAt(text.length - 1 - i) + typingElement.textContent;
+        i++;
+        setTimeout(typeWriter, 100);
+    } else {
+        setTimeout(() => {
+            typingElement.textContent = "";
+            i = 0;
+            typeWriter();
+        }, 1500); // Pause before looping
+    }
+}
+
+typeWriter();
+</script>
+
+</body>
+</html>
