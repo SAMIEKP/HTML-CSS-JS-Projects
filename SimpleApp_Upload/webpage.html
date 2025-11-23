@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>APPSTORE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>APPSTORE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h2>Welocome to the Appstore</h2>
+            <p>Upload and down your favourite apps.</p>
+        </section>
+
+        <section id="upload">
+            <h2>Upload your Apps</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="app" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section id="download">
+            <h2>Download apps.</h2>
+            <p>Please <a href="#login">Login</a> to download apps.</p>
+        </section>
+            <section id="login">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <input type="text" name="Username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+    </body>
+</html>
