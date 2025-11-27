@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Web Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm" class="contact-form">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Fill out the form below.</p>
+            
+            <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Full Name</label>
+                <div class="error-message" id="nameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address</label>
+                <div class="error-message" id="emailError"></div>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="error-message" id="messageError"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+
+            <div id="statusMessage"></div>
+
+            <!-- Social Media Links Section -->
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" title="Facebook" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1877F2" viewBox="0 0 24 24" width="30" height="30"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.332v21.336C0 23.4.6 24 1.325 24H12.82v-9.294H9.692V11.17h3.13V8.414c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24h-1.917c-1.504 0-1.795.715-1.795 1.763v2.312h3.59l-.467 3.537h-3.123V24h6.116c.725 0 1.309-.6 1.309-1.332V1.332C24 .6 23.417 0 22.675 0z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0A66C2" viewBox="0 0 24 24" width="30" height="30"><path d="M20.447 20.452H17.23v-5.569c0-1.328-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.94v5.667H9.074V9h3.11v1.561h.045c.434-.823 1.494-1.69 3.073-1.69 3.287 0 3.89 2.164 3.89 4.977v6.604zM5.337 7.433c-1.002 0-1.814-.813-1.814-1.814 0-1.003.812-1.815 1.814-1.815s1.815.812 1.815 1.815c0 1.001-.813 1.814-1.815 1.814zm1.666 13.02H3.675V9h3.328v11.453zM22.225 0H1.771C.792 0 0 .774 0 1.723v20.554C0 23.211.792 24 1.771 24h20.451c.98 0 1.778-.789 1.778-1.723V1.723C24 .774 23.204 0 22.225 0z"/></svg>
+                </a>
+                <a href="https://github.com" target="_blank" aria-label="Github" title="Github" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 24 24" width="30" height="30"><path d="M12 0a12 12 0 0 0-3.793 23.398c.6.113.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.088-.744.083-.729.083-.729 1.205.086 1.839 1.236 1.839 1.236 1.07 1.83 2.807 1.3 3.492.994.107-.776.42-1.3.763-1.6-2.665-.304-5.467-1.34-5.467-5.954 0-1.314.467-2.388 1.236-3.23-.124-.303-.536-1.52.117-3.168 0 0 1.008-.322 3.3 1.23a11.44 11.44 0 0 1 3.003-.404 11.44 11.44 0 0 1 3.003.404c2.292-1.552 3.297-1.23 3.297-1.23.655 1.648.243 2.865.12 3.168.77.842 1.234 1.916 1.234 3.23 0 4.623-2.807 5.647-5.48 5.944.431.371.816 1.1.816 2.222v3.293c0 .32.218.694.825.576A12 12 0 0 0 12 0z"/></svg>
+                </a>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
